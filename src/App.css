@@ -8,6 +8,7 @@
 .app {
   background-color: rgb(5, 5, 5);
   min-height: 100vh;
+  padding-top: 1px;
 }
 html {
   scroll-behavior: smooth;
@@ -25,7 +26,18 @@ header {
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
-
+.mobile-menu {
+  display: none;
+}
+.nav {
+  display: none;
+  color: white;
+  writing-mode: vertical-lr;
+  cursor: pointer;
+  transition: color 0.3s;
+  display: none;
+  font-size: 1.8rem;
+}
 .nav-list {
   justify-content: center;
   display: flex;
@@ -211,8 +223,13 @@ section > .name {
   display: block;
 }
 @media only screen and (max-width: 1000px) {
-  .mobile-menu {
+  .nav {
     display: flex;
+    margin: auto;
+    margin-right: 100px;
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: center;
   }
   .nav-list {
     display: none;

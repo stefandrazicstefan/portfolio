@@ -5,15 +5,77 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import CodeIcon from "@mui/icons-material/Code";
 import SettingsIcon from "@mui/icons-material/Settings";
+import { useEffect, useRef, useState } from "react";
 
 function App() {
+  const [dropdown, setDropdown] = useState("");
+
+  const ref = useRef();
+
+  const size = useWindowSize();
+  useEffect(() => {
+    if (size.width > "870") setDropdown("");
+  }, [size.width]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!ref?.current?.contains(event.target)) {
+        setDropdown("");
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+  }, [ref]);
+
+  function useWindowSize() {
+    const [windowSize, setWindowSize] = useState({
+      width: undefined,
+      height: undefined,
+    });
+    useEffect(() => {
+      function handleResize() {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+      window.addEventListener("resize", handleResize);
+      handleResize();
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    return windowSize;
+  }
+
   return (
     <div className="app">
-      <header>
-        <div className="mobile-menu">
-          <div className="line1"></div>
-          <div className="line2"></div>
-          <div className="line3"></div>
+      <header ref={ref}>
+        <div
+          className="nav"
+          onClick={(e) => {
+            dropdown === "" ? setDropdown("flex") : setDropdown("");
+          }}
+        >
+          <p>|||</p>
+        </div>
+        <div
+          className="mobile-menu"
+          style={{ display: dropdown }}
+        >
+          <div className="line1">
+            <a href="#about">
+              About <span>me</span>
+            </a>
+          </div>
+          <div className="line2">
+            <a href="#projects">Projects</a>
+          </div>
+          <div className="line3">
+            <a href="#resume">Resume</a>
+          </div>
+          <div className="line3">
+            {" "}
+            <a href="#resume">Contact me</a>
+          </div>
         </div>
         <ul className="nav-list">
           <li>
