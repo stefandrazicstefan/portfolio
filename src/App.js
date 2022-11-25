@@ -49,13 +49,14 @@ function App() {
   return (
     <div className="app">
       <header ref={ref}>
-        <div
-          className="nav"
-          onClick={(e) => {
-            dropdown === "" ? setDropdown("flex") : setDropdown("");
-          }}
-        >
-          <p>|||</p>
+        <div className="nav">
+          <p
+            onClick={(e) => {
+              dropdown === "" ? setDropdown("flex") : setDropdown("");
+            }}
+          >
+            |||
+          </p>
         </div>
         <div
           className="mobile-menu"
