@@ -28,11 +28,14 @@ function App() {
             <a href="#resume">Resume</a>
           </li>
           <li>
-            <a href="#contact">Contact me</a>
+            <a href="#resume">Contact me</a>
           </li>
         </ul>
       </header>
-      <section className="about_me_section">
+      <section
+        id="about"
+        className="about_me_section"
+      >
         <div className="name">
           <p className="name_name">
             Hey there, it`s <span>Stefan Dražić</span>
@@ -44,7 +47,10 @@ function App() {
           </p>
         </div>
       </section>
-      <section className="projects_section">
+      <section
+        id="projects"
+        className="projects_section"
+      >
         <div className="projects_div">
           <h2>
             Projects <span>.</span>
@@ -170,7 +176,10 @@ function App() {
           </div>
         </div>
       </section>
-      <section className="resume_contact_section">
+      <section
+        id="resume"
+        className="resume_contact_section"
+      >
         <div>
           <div className="resume">
             <h1>Resume</h1>
@@ -184,29 +193,27 @@ function App() {
         <div className="contact">
           <h1>Contact me</h1>
           <div className="contact_div">
-            <h2>
-              <EmailIcon />
-              Email
-            </h2>
-            <h2>
+            <h2>stefandrazicstefan@gmail.com</h2>
+            <h2 style={{ marginTop: "5px" }}>
               <a
                 href="https://github.com/stefandrazicstefan/"
                 target="_blank"
                 style={{ color: "white" }}
               >
-                <GitHubIcon />
+                <GitHubIcon style={{ fontSize: "30px" }} />
               </a>
-              Github
-            </h2>
-            <h2>
               <a
                 href="https://www.linkedin.com/in/%D1%81%D1%82%D0%B5%D1%84%D0%B0%D0%BD-%D0%B4%D1%80%D0%B0%D0%B6%D0%B8%D1%9B-578533256/"
                 target="_blank"
-                style={{ color: "#0A66C2" }} // white or blue ?
+                style={{
+                  color: "#fff",
+                  marginLeft: "10px",
+                }}
               >
-                <LinkedInIcon />
+                <LinkedInIcon
+                  style={{ fontSize: "33px", marginBottom: "-2px" }}
+                />
               </a>
-              LinkedIn
             </h2>
           </div>
         </div>
