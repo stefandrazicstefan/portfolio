@@ -7,9 +7,36 @@ import CodeIcon from "@mui/icons-material/Code";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { useEffect, useRef, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Box, Chip, Fade, Popper } from "@mui/material";
 
 function App() {
   const [dropdown, setDropdown] = useState("");
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [anchorEl2, setAnchorEl2] = useState(null);
+  const [anchorEl3, setAnchorEl3] = useState(null);
+  const [anchorEl4, setAnchorEl4] = useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(anchorEl ? null : event.currentTarget);
+  };
+  const handleClick2 = (event) => {
+    setAnchorEl2(anchorEl2 ? null : event.currentTarget);
+  };
+  const handleClick3 = (event) => {
+    setAnchorEl3(anchorEl3 ? null : event.currentTarget);
+  };
+  const handleClick4 = (event) => {
+    setAnchorEl4(anchorEl4 ? null : event.currentTarget);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? "transition-popper" : undefined;
+  const open2 = Boolean(anchorEl2);
+  const id2 = open2 ? "transition-popper" : undefined;
+  const open3 = Boolean(anchorEl3);
+  const id3 = open3 ? "transition-popper" : undefined;
+  const open4 = Boolean(anchorEl4);
+  const id4 = open4 ? "transition-popper" : undefined;
 
   const ref = useRef();
 
@@ -138,17 +165,97 @@ function App() {
                 </p>
                 <div className="buttons">
                   <button className="live">
-                    <VisibilityIcon />
-                    <span>Live</span>
+                    <a
+                      target="_blank"
+                      href="https://stefandrazicstefan.github.io/Crypto_Price_Checker/"
+                    >
+                      <VisibilityIcon />
+                      <span>Live</span>
+                    </a>
                   </button>
                   <button className="code">
-                    <CodeIcon />
-                    <span>Code</span>
+                    <a
+                      target="_blank"
+                      href="https://github.com/stefandrazicstefan/Crypto_Price_Checker"
+                    >
+                      <CodeIcon />
+                      <span>Code</span>
+                    </a>
                   </button>
-                  <button className="technologies">
+                  <button
+                    className="technologies"
+                    onClick={handleClick}
+                  >
                     <SettingsIcon />
                     <span>Technologies Used</span>
                   </button>
+                  <div>
+                    <Popper
+                      id={id}
+                      open={open}
+                      anchorEl={anchorEl}
+                    >
+                      <Box
+                        sx={{
+                          border: 1,
+                          p: 1,
+                          bgcolor: "background.paper",
+                          borderRadius: 2,
+                        }}
+                      >
+                        <Chip
+                          label="React"
+                          variant="outlined"
+                          sx={{
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="JavaScript"
+                          variant="outlined"
+                          sx={{
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="HTML"
+                          variant="outlined"
+                        />
+                        <br />{" "}
+                        <Chip
+                          label="CSS"
+                          variant="outlined"
+                          sx={{
+                            marginTop: 1,
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="Api"
+                          variant="outlined"
+                          sx={{
+                            marginTop: 1,
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="MUI"
+                          variant="outlined"
+                          sx={{
+                            marginTop: 1,
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="Responsive"
+                          variant="outlined"
+                          sx={{
+                            marginTop: 1,
+                          }}
+                        />
+                      </Box>
+                    </Popper>
+                  </div>
                 </div>
               </div>
               <div
@@ -167,17 +274,104 @@ function App() {
                 </p>
                 <div className="buttons">
                   <button className="live">
-                    <VisibilityIcon />
-                    <span>Live</span>
+                    <a
+                      target="_blank"
+                      href="https://stefandrazicstefan.github.io/TeamManagement/"
+                    >
+                      <VisibilityIcon />
+                      <span>Live</span>
+                    </a>
                   </button>
                   <button className="code">
-                    <CodeIcon />
-                    <span>Code</span>
+                    <a
+                      target="_blank"
+                      href="https://github.com/stefandrazicstefan/TeamManagement"
+                    >
+                      <CodeIcon />
+                      <span>Code</span>
+                    </a>
                   </button>
-                  <button className="technologies">
+                  <button
+                    className="technologies"
+                    onClick={handleClick2}
+                  >
                     <SettingsIcon />
                     <span>Technologies Used</span>
                   </button>
+                  <div>
+                    <Popper
+                      id={id2}
+                      open={open2}
+                      anchorEl={anchorEl2}
+                    >
+                      <Box
+                        sx={{
+                          border: 1,
+                          p: 1,
+                          bgcolor: "background.paper",
+                          borderRadius: 2,
+                        }}
+                      >
+                        <Chip
+                          label="React"
+                          variant="outlined"
+                          sx={{
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="JavaScript"
+                          variant="outlined"
+                          sx={{
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="HTML"
+                          variant="outlined"
+                          sx={{
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="CSS"
+                          variant="outlined"
+                        />{" "}
+                        <br />{" "}
+                        <Chip
+                          label="Firebase"
+                          variant="outlined"
+                          sx={{
+                            marginTop: 1,
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="CRUD"
+                          variant="outlined"
+                          sx={{
+                            marginTop: 1,
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="MUI"
+                          variant="outlined"
+                          sx={{
+                            marginTop: 1,
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="Responsive"
+                          variant="outlined"
+                          sx={{
+                            marginTop: 1,
+                          }}
+                        />
+                      </Box>
+                    </Popper>
+                  </div>
                 </div>
               </div>
             </div>
@@ -201,17 +395,104 @@ function App() {
                 </p>
                 <div className="buttons">
                   <button className="live">
-                    <VisibilityIcon />
-                    <span>Live</span>
+                    <a
+                      target="_blank"
+                      href="https://stefandrazicstefan.github.io/Shopping-Site/"
+                    >
+                      <VisibilityIcon />
+                      <span>Live</span>
+                    </a>
                   </button>
                   <button className="code">
-                    <CodeIcon />
-                    <span>Code</span>
+                    <a
+                      target="_blank"
+                      href="https://github.com/stefandrazicstefan/Shopping-Site"
+                    >
+                      <CodeIcon />
+                      <span>Code</span>
+                    </a>
                   </button>
-                  <button className="technologies">
+                  <button
+                    className="technologies"
+                    onClick={handleClick3}
+                  >
                     <SettingsIcon />
                     <span>Technologies Used</span>
                   </button>
+                  <div>
+                    <Popper
+                      id={id3}
+                      open={open3}
+                      anchorEl={anchorEl3}
+                    >
+                      <Box
+                        sx={{
+                          border: 1,
+                          p: 1,
+                          bgcolor: "background.paper",
+                          borderRadius: 2,
+                        }}
+                      >
+                        <Chip
+                          label="React"
+                          variant="outlined"
+                          sx={{
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="JavaScript"
+                          variant="outlined"
+                          sx={{
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="HTML"
+                          variant="outlined"
+                          sx={{
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="Redux"
+                          variant="outlined"
+                        />
+                        <br />{" "}
+                        <Chip
+                          label="CSS"
+                          variant="outlined"
+                          sx={{
+                            marginTop: 1,
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="Api"
+                          variant="outlined"
+                          sx={{
+                            marginTop: 1,
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="MUI"
+                          variant="outlined"
+                          sx={{
+                            marginTop: 1,
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="Responsive"
+                          variant="outlined"
+                          sx={{
+                            marginTop: 1,
+                          }}
+                        />
+                      </Box>
+                    </Popper>
+                  </div>
                 </div>
               </div>
               <div
@@ -222,23 +503,99 @@ function App() {
               >
                 <h3>Portfolio Website</h3>
                 <img
-                  src={require("./assets/crypto.png")}
+                  src={require("./assets/portfolio.jpg")}
                   alt=""
                 />
-                <p>Description</p>
+                <p>
+                  For this website my goal was simplicity and modern
+                  design. It is made in React and all styling is done
+                  with CSS3.
+                </p>
                 <div className="buttons">
                   <button className="live">
-                    <VisibilityIcon />
-                    <span>Live</span>
+                    <a
+                      target="_blank"
+                      href="https://stefandrazicstefan.github.io/portfolio/"
+                    >
+                      <VisibilityIcon />
+                      <span>Live</span>
+                    </a>
                   </button>
                   <button className="code">
-                    <CodeIcon />
-                    <span>Code</span>
+                    <a
+                      target="_blank"
+                      href="https://github.com/stefandrazicstefan/portfolio"
+                    >
+                      <CodeIcon />
+                      <span>Code</span>
+                    </a>
                   </button>
-                  <button className="technologies">
+                  <button
+                    className="technologies"
+                    onClick={handleClick4}
+                  >
                     <SettingsIcon />
                     <span>Technologies Used</span>
                   </button>
+                  <div>
+                    <Popper
+                      id={id4}
+                      open={open4}
+                      anchorEl={anchorEl4}
+                    >
+                      <Box
+                        sx={{
+                          border: 1,
+                          p: 1,
+                          bgcolor: "background.paper",
+                          borderRadius: 2,
+                        }}
+                      >
+                        <Chip
+                          label="React"
+                          variant="outlined"
+                          sx={{
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="JavaScript"
+                          variant="outlined"
+                          sx={{
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="HTML"
+                          variant="outlined"
+                        />
+                        <br />{" "}
+                        <Chip
+                          label="CSS"
+                          variant="outlined"
+                          sx={{
+                            marginTop: 1,
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="MUI"
+                          variant="outlined"
+                          sx={{
+                            marginTop: 1,
+                            marginRight: 1,
+                          }}
+                        />
+                        <Chip
+                          label="Responsive"
+                          variant="outlined"
+                          sx={{
+                            marginTop: 1,
+                          }}
+                        />
+                      </Box>
+                    </Popper>
+                  </div>
                 </div>
               </div>
             </div>
