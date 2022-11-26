@@ -6,6 +6,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import CodeIcon from "@mui/icons-material/Code";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { useEffect, useRef, useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
 
 function App() {
   const [dropdown, setDropdown] = useState("");
@@ -55,7 +56,7 @@ function App() {
               dropdown === "" ? setDropdown("flex") : setDropdown("");
             }}
           >
-            |||
+            <MenuIcon style={{ fontSize: "50px" }} />
           </p>
         </div>
         <div
@@ -73,9 +74,9 @@ function App() {
           <div className="line3">
             <a href="#resume">Resume</a>
           </div>
-          <div className="line3">
+          <div className="line4">
             {" "}
-            <a href="#resume">Contact me</a>
+            <a href="#contact">Contact me</a>
           </div>
         </div>
         <ul className="nav-list">
@@ -91,7 +92,7 @@ function App() {
             <a href="#resume">Resume</a>
           </li>
           <li>
-            <a href="#resume">Contact me</a>
+            <a href="#contact">Contact me</a>
           </li>
         </ul>
       </header>
@@ -253,7 +254,10 @@ function App() {
             <button className="download">Download</button>
           </div>
         </div>
-        <div className="contact">
+        <div
+          className="contact"
+          id="contact"
+        >
           <h1>Contact me</h1>
           <div className="contact_div">
             <h2>stefandrazicstefan@gmail.com</h2>

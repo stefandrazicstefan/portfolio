@@ -19,15 +19,29 @@ header {
   top: 0;
   background-color: rgba(5, 5, 5, 0.615);
   width: 100%;
-  height: 80px;
+  min-height: 80px;
   border-bottom: 1px solid rgb(82, 82, 82);
   justify-content: center;
   margin: auto;
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
+  transition: all 0.3s;
 }
 .mobile-menu {
   display: none;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.mobile-menu > div {
+  margin: 5px 0;
+}
+.mobile-menu > div > a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
 }
 .nav {
   display: none;
@@ -60,7 +74,7 @@ header {
   color: #ff3a5e;
 }
 section {
-  height: 600px;
+  min-height: 600px;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -92,7 +106,8 @@ section > .name {
   color: #ff3a5e;
 }
 .projects_section,
-.about_me_section {
+.about_me_section,
+.resume_contact_section {
   scroll-margin-top: 80px;
 }
 .projects_section,
@@ -102,7 +117,7 @@ section > .name {
 .projects_div {
   display: flex;
   flex-direction: column;
-  gap: 3.5rem;
+  gap: 2.5rem;
 }
 .projects_div > h2 {
   margin: auto;
@@ -148,6 +163,7 @@ section > .name {
   gap: 1rem;
   justify-content: center;
   text-align: center;
+  flex-wrap: wrap;
   margin: auto;
   margin-bottom: 0;
 }
@@ -182,6 +198,7 @@ section > .name {
   justify-content: center;
   gap: 0.5rem;
   margin: auto;
+  align-items: center;
 }
 .resume > h1 {
   margin: auto;
@@ -203,7 +220,6 @@ section > .name {
 }
 .contact {
   width: 100%;
-  padding-top: 120px;
   height: 100%;
   margin: auto;
   text-align: center;
@@ -222,11 +238,21 @@ section > .name {
 .contact_div > h2 {
   display: block;
 }
+@media only screen and (max-width: 1793px) {
+  .projects_section {
+    padding: 20px 0;
+  }
+}
 @media only screen and (max-width: 1000px) {
+  .projects_section,
+  .about_me_section,
+  .resume_contact_section {
+    scroll-margin-top: 274px;
+  }
   .nav {
     display: flex;
     margin: auto;
-    margin-right: 100px;
+    margin-right: 10%;
     flex-direction: column;
     justify-content: center;
   }
@@ -235,5 +261,73 @@ section > .name {
   }
   .nav-list {
     display: none;
+  }
+}
+@media only screen and (max-width: 815px) {
+  .resume_contact_section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .contact {
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .name {
+    width: 90%;
+  }
+  .name_name {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+  }
+  .name_p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .name_name {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+  .name_p {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+  .mobile-menu > div > a {
+    font-size: 1rem;
+  }
+  .nav > p {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .resume > img {
+    width: 300px;
+    height: 400px;
+  }
+  .single_project > img {
+    width: 258px;
+  }
+  .contact > h1 {
+    font-size: 1.3rem;
+  }
+  .contact_div > h2 {
+    font-size: 1.2rem;
+  }
+  .single_project {
+    width: 300px;
+    height: 500px;
+  }
+}
+@media only screen and (max-width: 315px) {
+  .single_project {
+    width: 270px;
+    height: 510px;
+    padding: 10px 5px;
+  }
+  .resume > img {
+    width: 250px;
+    height: 400px;
   }
 }
