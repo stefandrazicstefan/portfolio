@@ -13,6 +13,25 @@
 html {
   scroll-behavior: smooth;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+  box-shadow: inset 0 0 5px rgb(0, 0, 0);
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f73054;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #df2e2e;
+}
+
 header {
   position: sticky;
   position: -webkit-sticky;
@@ -118,14 +137,15 @@ section > .name {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  padding: 40px 15px;
 }
 .projects_div > h2 {
   margin: auto;
   font-size: 2.5rem;
 }
 .projects {
-  margin: auto;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 4rem;
@@ -133,12 +153,21 @@ section > .name {
 .projects_div > h2 > span {
   color: rgb(255, 58, 94);
 }
-
+.left_div {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+.right_div {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
 .single_project {
   padding: 10px 20px;
   background-color: rgb(5, 5, 5);
   width: 400px;
-  height: 450px;
+  height: 460px;
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -217,6 +246,7 @@ section > .name {
   background-color: #ff3a5e;
   border-radius: 5px;
   width: 150px;
+  color: white;
 }
 .contact {
   width: 100%;
@@ -239,15 +269,19 @@ section > .name {
   display: block;
 }
 @media only screen and (max-width: 1793px) {
-  .projects_section {
-    padding: 20px 0;
+  .left_div,
+  .right_div {
+    flex-direction: column;
+  }
+  .projects {
+    justify-content: space-evenly;
   }
 }
 @media only screen and (max-width: 1000px) {
   .projects_section,
   .about_me_section,
   .resume_contact_section {
-    scroll-margin-top: 274px;
+    scroll-margin-top: 250px;
   }
   .nav {
     display: flex;
@@ -286,6 +320,11 @@ section > .name {
   }
 }
 @media only screen and (max-width: 450px) {
+  .projects_section,
+  .about_me_section,
+  .resume_contact_section {
+    scroll-margin-top: 200px;
+  }
   .name_name {
     font-size: 2rem;
     margin-bottom: 25px;
@@ -299,6 +338,9 @@ section > .name {
   }
   .nav > p {
     font-size: 1.5rem;
+  }
+  .projects_div > h2 {
+    font-size: 1.75rem;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -330,4 +372,23 @@ section > .name {
     width: 250px;
     height: 400px;
   }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.name_p::after {
+  content: "|";
+  font-size: 1.75rem;
+  margin-left: 10px;
+  opacity: 1;
+  animation: blink 1s infinite;
+  color: #ff3a5e;
 }

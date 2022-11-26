@@ -107,7 +107,7 @@ function App() {
           <p className="name_p">
             I`m a <span>software developer</span> currently studying
             Data Engineering at the Faculty of Technical Sciences in
-            Novi Sad, Serbia
+            Novi Sad, Serbia.
           </p>
         </div>
       </section>
@@ -120,121 +120,126 @@ function App() {
             Projects <span>.</span>
           </h2>
           <div className="projects">
-            <div
-              className="single_project"
-              style={{ border: "1px solid #ff3a5e" }}
-            >
-              <h3>Crypto Price Checker</h3>
-              <img
-                src={require("./assets/crypto.gif")}
-                alt=""
-              />
-              <p>
-                Web application for checking latest cryptocurrency
-                statistics. In this application, my focus was on
-                simplicity and design. The data is fetched from an
-                api.
-              </p>
-              <div className="buttons">
-                <button className="live">
-                  <VisibilityIcon />
-                  <span>Live</span>
-                </button>
-                <button className="code">
-                  <CodeIcon />
-                  <span>Code</span>
-                </button>
-                <button className="technologies">
-                  <SettingsIcon />
-                  <span>Technologies Used</span>
-                </button>
+            <div className="left_div">
+              <div
+                className="single_project"
+                style={{ border: "1px solid #ff3a5e" }}
+              >
+                <h3>Crypto Price Checker</h3>
+                <img
+                  src={require("./assets/crypto.gif")}
+                  alt=""
+                />
+                <p>
+                  Web application for checking latest cryptocurrency
+                  statistics. In this application, my focus was on
+                  simplicity and design. The data is fetched from an
+                  api.
+                </p>
+                <div className="buttons">
+                  <button className="live">
+                    <VisibilityIcon />
+                    <span>Live</span>
+                  </button>
+                  <button className="code">
+                    <CodeIcon />
+                    <span>Code</span>
+                  </button>
+                  <button className="technologies">
+                    <SettingsIcon />
+                    <span>Technologies Used</span>
+                  </button>
+                </div>
+              </div>
+              <div
+                className="single_project"
+                style={{ border: "1px solid rgb(255, 58, 120)" }}
+              >
+                <h3>Team Management</h3>
+                <img
+                  src={require("./assets/team.gif")}
+                  alt=""
+                />
+                <p>
+                  This application utilizes a firebase backend. You
+                  can create, read, edit and delete members of the
+                  team.{" "}
+                </p>
+                <div className="buttons">
+                  <button className="live">
+                    <VisibilityIcon />
+                    <span>Live</span>
+                  </button>
+                  <button className="code">
+                    <CodeIcon />
+                    <span>Code</span>
+                  </button>
+                  <button className="technologies">
+                    <SettingsIcon />
+                    <span>Technologies Used</span>
+                  </button>
+                </div>
               </div>
             </div>
-            <div
-              className="single_project"
-              style={{ border: "1px solid rgb(255, 58, 120)" }}
-            >
-              <h3>Team Management</h3>
-              <img
-                src={require("./assets/team.gif")}
-                alt=""
-              />
-              <p>
-                This application utilizes a firebase backend. You can
-                create, read, edit and delete members of the team.{" "}
-              </p>
-              <div className="buttons">
-                <button className="live">
-                  <VisibilityIcon />
-                  <span>Live</span>
-                </button>
-                <button className="code">
-                  <CodeIcon />
-                  <span>Code</span>
-                </button>
-                <button className="technologies">
-                  <SettingsIcon />
-                  <span>Technologies Used</span>
-                </button>
+            <div className="right_div">
+              <div
+                className="single_project"
+                style={{
+                  border: "1px solid rgb(250, 57, 154)",
+                }}
+              >
+                <h3>Shopping site</h3>
+                <img
+                  src={require("./assets/ecommerce.gif")}
+                  alt=""
+                />
+                <p>
+                  Multi-page web application. Products in the shop are
+                  fetched from an api. Customer can add items to cart,
+                  increase or decrease quantity of items, delete items
+                  from cart. Handling CRUD operations with Redux.
+                </p>
+                <div className="buttons">
+                  <button className="live">
+                    <VisibilityIcon />
+                    <span>Live</span>
+                  </button>
+                  <button className="code">
+                    <CodeIcon />
+                    <span>Code</span>
+                  </button>
+                  <button className="technologies">
+                    <SettingsIcon />
+                    <span>Technologies Used</span>
+                  </button>
+                </div>
               </div>
-            </div>
-            <div
-              className="single_project"
-              style={{
-                border: "1px solid rgb(250, 57, 154)",
-              }}
-            >
-              <h3>Shopping site</h3>
-              <img
-                src={require("./assets/crypto.png")}
-                alt=""
-              />
-              <p>
-                Multi-page web application. Products in the shop are
-                fetched from an api. Customer can add items to cart,
-                increase or decrease quantity of items, delete items
-                from cart. Handling CRUD operations with Redux.
-              </p>
-              <div className="buttons">
-                <button className="live">
-                  <VisibilityIcon />
-                  <span>Live</span>
-                </button>
-                <button className="code">
-                  <CodeIcon />
-                  <span>Code</span>
-                </button>
-                <button className="technologies">
-                  <SettingsIcon />
-                  <span>Technologies Used</span>
-                </button>
-              </div>
-            </div>
-            <div
-              className="single_project"
-              style={{
-                border: "1px solid rgb(250, 57, 184)",
-              }}
-            >
-              <h3>Portfolio Website</h3>
-              <img
-                src={require("./assets/crypto.png")}
-                alt=""
-              />
-              <p>Description</p>
-              <div className="buttons">
-                <button className="live">
-                  <VisibilityIcon />
-                  <span>Live</span>
-                </button>
-                <button className="code">
-                  <CodeIcon />
-                  <span>Code</span>
-                </button>
-                <button className="technologies">
-                  <SettingsIcon />
-                  <span>Technologies Used</span>
-                </button>
+              <div
+                className="single_project"
+                style={{
+                  border: "1px solid rgb(250, 57, 184)",
+                }}
+              >
+                <h3>Portfolio Website</h3>
+                <img
+                  src={require("./assets/crypto.png")}
+                  alt=""
+                />
+                <p>Description</p>
+                <div className="buttons">
+                  <button className="live">
+                    <VisibilityIcon />
+                    <span>Live</span>
+                  </button>
+                  <button className="code">
+                    <CodeIcon />
+                    <span>Code</span>
+                  </button>
+                  <button className="technologies">
+                    <SettingsIcon />
+                    <span>Technologies Used</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
