@@ -1,13 +1,12 @@
 import "./App.css";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import CodeIcon from "@mui/icons-material/Code";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { useEffect, useRef, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Box, Chip, Fade, Popper } from "@mui/material";
+import { Box, Chip, Popper } from "@mui/material";
 
 function App() {
   const [dropdown, setDropdown] = useState("");
@@ -158,10 +157,10 @@ function App() {
                   alt=""
                 />
                 <p>
-                  Web application for checking latest cryptocurrency
-                  statistics. In this application, my focus was on
-                  simplicity and design. The data is fetched from an
-                  api.
+                  Web application for checking the latest
+                  cryptocurrency statistics. In this application, my
+                  focus was on simplicity and design. The data is
+                  fetched from an api.
                 </p>
                 <div className="buttons">
                   <button className="live">
@@ -268,7 +267,7 @@ function App() {
                   alt=""
                 />
                 <p>
-                  This application utilizes a firebase backend. You
+                  This application utilizes a firebase backend. Users
                   can create, read, edit and delete members of the
                   team.{" "}
                 </p>
@@ -389,9 +388,10 @@ function App() {
                 />
                 <p>
                   Multi-page web application. Products in the shop are
-                  fetched from an api. Customer can add items to cart,
-                  increase or decrease quantity of items, delete items
-                  from cart. Handling CRUD operations with Redux.
+                  fetched from an api. Customers can add items to
+                  cart, increase or decrease quantity of items and
+                  delete items from the cart. Handling CRUD operations
+                  with Redux.
                 </p>
                 <div className="buttons">
                   <button className="live">
@@ -610,10 +610,17 @@ function App() {
           <div className="resume">
             <h1>Resume</h1>
             <img
-              src=""
+              src={require("./assets/resume.jpg")}
               alt=""
             />
-            <button className="download">Download</button>
+
+            <a
+              href={require("./assets/resume.pdf")}
+              download
+              target="_blank"
+            >
+              <button className="download">Download</button>
+            </a>
           </div>
         </div>
         <div
@@ -632,7 +639,7 @@ function App() {
                 <GitHubIcon style={{ fontSize: "30px" }} />
               </a>
               <a
-                href="https://www.linkedin.com/in/%D1%81%D1%82%D0%B5%D1%84%D0%B0%D0%BD-%D0%B4%D1%80%D0%B0%D0%B6%D0%B8%D1%9B-578533256/"
+                href="https://linkedin.com/in/stefan-drazic"
                 target="_blank"
                 style={{
                   color: "#fff",
