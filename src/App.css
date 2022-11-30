@@ -169,6 +169,18 @@ section > .name {
 .name_p > span {
   color: #ff3a5e;
 }
+.name_p::after {
+  content: "|";
+  font-size: 1.65rem;
+  margin-left: 5px;
+  margin-top: 3px;
+  position: absolute;
+  top: auto;
+  opacity: 0;
+  animation: blink 1.2s infinite 2.3s;
+  color: #ff3a5e;
+}
+
 .projects_section,
 .about_me_section,
 .resume_contact_section {
@@ -385,6 +397,11 @@ section > .name {
     font-size: 1.5rem;
     line-height: 2rem;
   }
+  .name_p::after {
+    font-size: 1.25rem;
+    margin-left: 3px;
+    margin-top: -2px;
+  }
 }
 @media only screen and (max-width: 450px) {
   .projects_section,
@@ -408,6 +425,11 @@ section > .name {
   }
   .projects_div > h2 {
     font-size: 1.75rem;
+  }
+  .name_p::after {
+    font-size: 0.8rem;
+    margin-left: 3px;
+    margin-top: -1px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -454,16 +476,4 @@ section > .name {
   50% {
     opacity: 0;
   }
-}
-
-.name_p::after {
-  content: "|";
-  font-size: 1.65rem;
-  margin-left: 5px;
-  margin-top: 3px;
-  position: absolute;
-  top: auto;
-  opacity: 0;
-  animation: blink 1.2s infinite 2.3s;
-  color: #ff3a5e;
 }

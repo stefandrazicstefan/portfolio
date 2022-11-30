@@ -18,6 +18,14 @@ function App() {
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
+  /*  const [ref2project, inView2project] = useInView({
+    triggerOnce: true,
+  });
+  const [ref3project, inView3project] = useInView({
+    triggerOnce: true,
+  }); finish useEffect hooks etc..
+  */
+
   const animation = useAnimation();
 
   useEffect(() => {
