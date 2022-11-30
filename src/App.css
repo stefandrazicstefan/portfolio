@@ -10,6 +10,9 @@
   min-height: 100vh;
   padding-top: 1px;
 }
+
+/* Custom scrollbar styles */
+
 html {
   scroll-behavior: smooth;
 }
@@ -31,6 +34,8 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #df2e2e;
 }
+
+/* Header */
 
 header {
   position: sticky;
@@ -80,18 +85,44 @@ header {
   gap: 2rem;
 }
 .nav-list > li {
-  color: aliceblue;
+  color: whitesmoke;
   list-style: none;
   padding: 25px;
 }
 .nav-list > li > a {
-  color: aliceblue;
+  color: whitesmoke;
   text-decoration: none;
   font-size: 1.25rem;
+  display: flex;
+  position: relative;
+  gap: 0.5rem;
 }
 .nav-list > li > a > span {
   color: #ff3a5e;
 }
+.nav-list li a:hover {
+  color: white;
+}
+header .nav-list li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  bottom: -6px;
+
+  left: auto;
+  height: 1px;
+  background: linear-gradient(270deg, #ff3a5e 0%, #17161d 100%);
+  transform-origin: bottom right;
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+header .nav-list li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Body */
+
 section {
   min-height: 600px;
   color: #fff;
@@ -107,19 +138,34 @@ section > .name {
   margin: auto;
   text-align: center;
 }
+@keyframes drop {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 .name_name {
   font-size: 3.5rem;
   font-weight: 600;
   margin: auto;
   margin-bottom: 10px;
+  opacity: 0;
+  animation: drop 1.3s cubic-bezier(0.5, 0, 0, 1) forwards 0.3s;
 }
 .name_name > span {
   color: #ff3a5e;
 }
+
 .name_p {
   font-size: 2rem;
   margin: auto;
   font-weight: 300;
+  opacity: 0;
+  animation: drop 1.6s cubic-bezier(0.5, 0, 0, 1) forwards 1s;
 }
 .name_p > span {
   color: #ff3a5e;
@@ -392,6 +438,8 @@ section > .name {
   }
 }
 
+/* blinking / in about */
+
 @keyframes blink {
   0%,
   100% {
@@ -405,11 +453,11 @@ section > .name {
 .name_p::after {
   content: "|";
   font-size: 1.65rem;
-  margin-left: 10px;
+  margin-left: 5px;
   margin-top: 3px;
   position: absolute;
   top: auto;
-  opacity: 1;
-  animation: blink 1s infinite;
+  opacity: 0;
+  animation: blink 1.2s infinite 2.3s;
   color: #ff3a5e;
 }

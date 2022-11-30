@@ -10,6 +10,8 @@ import { Box, Chip, Popper } from "@mui/material";
 
 function App() {
   const [dropdown, setDropdown] = useState("");
+
+  // Technologies used
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorEl2, setAnchorEl2] = useState(null);
   const [anchorEl3, setAnchorEl3] = useState(null);
@@ -39,6 +41,7 @@ function App() {
 
   const ref = useRef();
 
+  //AutoClose navbar dropdown if size.width > 870
   const size = useWindowSize();
   useEffect(() => {
     if (size.width > "870") setDropdown("");
@@ -107,7 +110,10 @@ function App() {
         </div>
         <ul className="nav-list">
           <li>
-            <a href="#about">
+            <a
+              href="#about"
+              className="about"
+            >
               About <span>me</span>
             </a>
           </li>
