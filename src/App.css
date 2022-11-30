@@ -414,7 +414,7 @@ section > .name {
     margin-bottom: 25px;
   }
   .name_p {
-    font-size: 1rem;
+    font-size: 1.125rem;
     line-height: 1.75rem;
   }
   .mobile-menu > div > a {
@@ -427,9 +427,9 @@ section > .name {
     font-size: 1.75rem;
   }
   .name_p::after {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     margin-left: 3px;
-    margin-top: -1px;
+    margin-top: auto;
   }
 }
 @media only screen and (max-width: 400px) {
