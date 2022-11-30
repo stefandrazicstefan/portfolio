@@ -109,7 +109,6 @@ header .nav-list li a::after {
   width: 100%;
   transform: scaleX(0);
   bottom: -6px;
-
   left: auto;
   height: 1px;
   background: linear-gradient(270deg, #ff3a5e 0%, #17161d 100%);
@@ -359,12 +358,19 @@ section > .name {
   }
 }
 @media only screen and (max-width: 815px) {
+  .resume {
+    padding-top: 20px;
+  }
   .resume_contact_section {
     flex-direction: column;
     gap: 2rem;
   }
   .contact {
     margin-bottom: 40px;
+    margin-top: 30px;
+  }
+  .contact_div {
+    margin-top: 20px;
   }
 }
 @media only screen and (max-width: 640px) {

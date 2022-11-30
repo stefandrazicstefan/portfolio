@@ -7,11 +7,41 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import { useEffect, useRef, useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Box, Chip, Popper } from "@mui/material";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function App() {
   const [dropdown, setDropdown] = useState("");
 
-  // Technologies used
+  // Animations
+
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+  const animation = useAnimation();
+
+  useEffect(() => {
+    console.log(inView);
+    if (inView) {
+      animation.start({
+        y: 0,
+        transition: {
+          type: "spring",
+          duration: 2,
+        },
+        opacity: 1,
+      });
+    }
+    if (!inView) {
+      animation.start({
+        y: -400,
+        opacity: 0,
+      });
+    }
+  }, [inView]);
+
+  // Technologies used popper
+
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorEl2, setAnchorEl2] = useState(null);
   const [anchorEl3, setAnchorEl3] = useState(null);
@@ -39,7 +69,7 @@ function App() {
   const open4 = Boolean(anchorEl4);
   const id4 = open4 ? "transition-popper" : undefined;
 
-  const ref = useRef();
+  const refNav = useRef();
 
   //AutoClose navbar dropdown if size.width > 870
   const size = useWindowSize();
@@ -49,12 +79,12 @@ function App() {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (!ref?.current?.contains(event.target)) {
+      if (!refNav?.current?.contains(event.target)) {
         setDropdown("");
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
-  }, [ref]);
+  }, [refNav]);
 
   function useWindowSize() {
     const [windowSize, setWindowSize] = useState({
@@ -78,7 +108,7 @@ function App() {
 
   return (
     <div className="app">
-      <header ref={ref}>
+      <header ref={refNav}>
         <div className="nav">
           <p
             onClick={(e) => {
@@ -151,10 +181,15 @@ function App() {
           <h2>
             Projects <span>.</span>
           </h2>
-          <div className="projects">
+          <div
+            className="projects"
+            ref={ref}
+          >
             <div className="left_div">
-              <div
+              <motion.div
                 className="single_project"
+                animate={animation}
+                initial={{ y: -400, opacity: 0 }}
                 style={{ border: "1px solid #ff3a5e" }}
               >
                 <h3>Crypto Price Checker</h3>
@@ -262,9 +297,11 @@ function App() {
                     </Popper>
                   </div>
                 </div>
-              </div>
-              <div
+              </motion.div>
+              <motion.div
                 className="single_project"
+                animate={animation}
+                initial={{ y: -400, opacity: 0 }}
                 style={{ border: "1px solid rgb(255, 58, 120)" }}
               >
                 <h3>Team Management</h3>
@@ -378,11 +415,13 @@ function App() {
                     </Popper>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
             <div className="right_div">
-              <div
+              <motion.div
                 className="single_project"
+                animate={animation}
+                initial={{ y: -400, opacity: 0 }}
                 style={{
                   border: "1px solid rgb(250, 57, 154)",
                 }}
@@ -500,9 +539,11 @@ function App() {
                     </Popper>
                   </div>
                 </div>
-              </div>
-              <div
+              </motion.div>
+              <motion.div
                 className="single_project"
+                animate={animation}
+                initial={{ y: -400, opacity: 0 }}
                 style={{
                   border: "1px solid rgb(250, 57, 184)",
                 }}
@@ -603,7 +644,7 @@ function App() {
                     </Popper>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
