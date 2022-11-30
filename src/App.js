@@ -23,7 +23,7 @@ function App() {
   });
   const [ref3project, inView3project] = useInView({
     triggerOnce: true,
-  }); finish useEffect hooks etc..
+  }); finish useEffect hooks etc...
   */
 
   const animation = useAnimation();
@@ -35,14 +35,14 @@ function App() {
         y: 0,
         transition: {
           type: "spring",
-          duration: 2,
+          duration: 2.5,
         },
         opacity: 1,
       });
     }
     if (!inView) {
       animation.start({
-        y: -400,
+        y: -300,
         opacity: 0,
       });
     }
@@ -186,9 +186,12 @@ function App() {
         className="projects_section"
       >
         <div className="projects_div">
-          <h2>
+          <motion.h2
+            animate={animation}
+            initial={{ y: -300, opacity: 0 }}
+          >
             Projects <span>.</span>
-          </h2>
+          </motion.h2>
           <div
             className="projects"
             ref={ref}
@@ -197,7 +200,7 @@ function App() {
               <motion.div
                 className="single_project"
                 animate={animation}
-                initial={{ y: -400, opacity: 0 }}
+                initial={{ y: -300, opacity: 0 }}
                 style={{ border: "1px solid #ff3a5e" }}
               >
                 <h3>Crypto Price Checker</h3>
@@ -309,7 +312,7 @@ function App() {
               <motion.div
                 className="single_project"
                 animate={animation}
-                initial={{ y: -400, opacity: 0 }}
+                initial={{ y: -300, opacity: 0 }}
                 style={{ border: "1px solid rgb(255, 58, 120)" }}
               >
                 <h3>Team Management</h3>
@@ -429,7 +432,7 @@ function App() {
               <motion.div
                 className="single_project"
                 animate={animation}
-                initial={{ y: -400, opacity: 0 }}
+                initial={{ y: -300, opacity: 0 }}
                 style={{
                   border: "1px solid rgb(250, 57, 154)",
                 }}
@@ -551,7 +554,7 @@ function App() {
               <motion.div
                 className="single_project"
                 animate={animation}
-                initial={{ y: -400, opacity: 0 }}
+                initial={{ y: -300, opacity: 0 }}
                 style={{
                   border: "1px solid rgb(250, 57, 184)",
                 }}
