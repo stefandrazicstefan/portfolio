@@ -182,8 +182,7 @@ function App() {
           </p>
           <p className="name_p">
             I`m a <span>software</span> & <span>web developer</span>{" "}
-            currently studying Data Engineering at the Faculty of
-            Technical Sciences in Novi Sad, Serbia.
+            currently based in Novi Sad, Serbia.
           </p>
         </div>
       </section>
