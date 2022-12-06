@@ -12,8 +12,10 @@ import { useInView } from "react-intersection-observer";
 
 function App() {
   const [dropdown, setDropdown] = useState("");
-
-  // Animations
+  const [bgCol1, setBgCol1] = useState("white");
+  const [bgCol2, setBgCol2] = useState("white");
+  const [bgCol3, setBgCol3] = useState("white");
+  const [bgCol4, setBgCol4] = useState("white");
 
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -29,7 +31,6 @@ function App() {
   const animation = useAnimation();
 
   useEffect(() => {
-    console.log(inView);
     if (inView) {
       animation.start({
         y: 0,
@@ -48,8 +49,6 @@ function App() {
     }
   }, [inView]);
 
-  // Technologies used popper
-
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorEl2, setAnchorEl2] = useState(null);
   const [anchorEl3, setAnchorEl3] = useState(null);
@@ -57,15 +56,23 @@ function App() {
 
   const handleClick = (event) => {
     setAnchorEl(anchorEl ? null : event.currentTarget);
+    if (bgCol1 === "white") setBgCol1("#64646b");
+    else setBgCol1("white");
   };
   const handleClick2 = (event) => {
     setAnchorEl2(anchorEl2 ? null : event.currentTarget);
+    if (bgCol2 === "white") setBgCol2("#64646b");
+    else setBgCol2("white");
   };
   const handleClick3 = (event) => {
     setAnchorEl3(anchorEl3 ? null : event.currentTarget);
+    if (bgCol3 === "white") setBgCol3("#64646b");
+    else setBgCol3("white");
   };
   const handleClick4 = (event) => {
     setAnchorEl4(anchorEl4 ? null : event.currentTarget);
+    if (bgCol4 === "white") setBgCol4("#64646b");
+    else setBgCol4("white");
   };
 
   const open = Boolean(anchorEl);
@@ -79,7 +86,6 @@ function App() {
 
   const refNav = useRef();
 
-  //AutoClose navbar dropdown if size.width > 870
   const size = useWindowSize();
   useEffect(() => {
     if (size.width > "870") setDropdown("");
@@ -235,7 +241,10 @@ function App() {
                   </button>
                   <button
                     className="technologies"
-                    onClick={handleClick}
+                    onClick={(e) => {
+                      handleClick(e);
+                    }}
+                    style={{ backgroundColor: bgCol1 }}
                   >
                     <SettingsIcon />
                     <span>Technologies Used</span>
@@ -347,6 +356,7 @@ function App() {
                   <button
                     className="technologies"
                     onClick={handleClick2}
+                    style={{ backgroundColor: bgCol2 }}
                   >
                     <SettingsIcon />
                     <span>Technologies Used</span>
@@ -471,6 +481,7 @@ function App() {
                   <button
                     className="technologies"
                     onClick={handleClick3}
+                    style={{ backgroundColor: bgCol3 }}
                   >
                     <SettingsIcon />
                     <span>Technologies Used</span>
@@ -591,6 +602,7 @@ function App() {
                   <button
                     className="technologies"
                     onClick={handleClick4}
+                    style={{ backgroundColor: bgCol4 }}
                   >
                     <SettingsIcon />
                     <span>Technologies Used</span>

@@ -11,8 +11,6 @@
   padding-top: 1px;
 }
 
-/* Custom scrollbar styles */
-
 html {
   scroll-behavior: smooth;
 }
@@ -34,8 +32,6 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #df2e2e;
 }
-
-/* Header */
 
 header {
   position: sticky;
@@ -120,8 +116,6 @@ header .nav-list li a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
-/* Body */
 
 section {
   min-height: 600px;
@@ -274,6 +268,7 @@ section > .name {
   font-size: 0.85rem;
   background-color: #fff;
   border-radius: 5px;
+  transition: all 0.1s;
 }
 .live > a > span,
 .code > a > span,
@@ -467,8 +462,6 @@ section > .name {
     height: 400px;
   }
 }
-
-/* blinking / in about */
 
 @keyframes blink {
   0%,
