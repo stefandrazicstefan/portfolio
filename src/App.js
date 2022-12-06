@@ -178,12 +178,13 @@ function App() {
       >
         <div className="name">
           <p className="name_name">
-            Hey there, it`s <span>Stefan Dražić</span>
+            Helping companies build <span>modern</span> and{" "}
+            <span>high-quality</span> digital products.
           </p>
           <p className="name_p">
-            I`m a <span>software</span> & <span>web developer</span>{" "}
-            currently studying Data Engineering at the Faculty of
-            Technical Sciences in Novi Sad, Serbia.
+            A combination of design, front-end development and
+            professional skills that will make your product stand out
+            in the market.
           </p>
         </div>
       </section>
@@ -671,6 +672,9 @@ function App() {
             </div>
           </div>
         </div>
+      </section>
+      <section className="about_me">
+        <div></div>
       </section>
       <section
         id="resume"
