@@ -228,9 +228,6 @@ section > .name {
   gap: 0.5rem;
   margin: auto;
 }
-.single_project > img {
-  width: 358px;
-}
 .single_project > h3 {
   padding-top: 0;
   margin-top: 0;
@@ -365,6 +362,9 @@ section > .name {
   .nav-list {
     display: none;
   }
+  .name_name {
+    margin-bottom: 20px;
+  }
 }
 @media only screen and (max-width: 815px) {
   .resume {
@@ -428,13 +428,16 @@ section > .name {
     margin-left: 3px;
     margin-top: auto;
   }
+  .about_me_section {
+    min-height: 500px;
+  }
 }
 @media only screen and (max-width: 400px) {
   .resume > img {
     width: 300px;
     height: 400px;
   }
-  .single_project > img {
+  .single_project > video {
     width: 258px;
   }
   .contact > h1 {
@@ -445,7 +448,7 @@ section > .name {
   }
   .single_project {
     width: 300px;
-    height: 500px;
+    height: 510px;
   }
   .technologies {
     margin-left: 17px;

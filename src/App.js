@@ -209,10 +209,16 @@ function App() {
                 style={{ border: "1px solid #ff3a5e" }}
               >
                 <h3>Crypto Price Checker</h3>
-                <img
-                  src={require("./assets/crypto.gif")}
-                  alt=""
-                />
+                <video
+                  autoPlay
+                  muted
+                  width="358"
+                >
+                  <source
+                    src={require("./assets/crypto.mp4")}
+                    type="video/mp4"
+                  />
+                </video>
                 <p>
                   Web application for checking the latest
                   cryptocurrency statistics. In this application, my
@@ -324,10 +330,16 @@ function App() {
                 style={{ border: "1px solid rgb(255, 58, 120)" }}
               >
                 <h3>Team Management</h3>
-                <img
-                  src={require("./assets/team.gif")}
-                  alt=""
-                />
+                <video
+                  autoPlay
+                  muted
+                  width="358"
+                >
+                  <source
+                    src={require("./assets/team.mp4")}
+                    type="video/mp4"
+                  />
+                </video>
                 <p>
                   This application utilizes a firebase backend. Users
                   can create, read, edit and delete members of the
@@ -447,10 +459,16 @@ function App() {
                 }}
               >
                 <h3>Shopping site</h3>
-                <img
-                  src={require("./assets/ecommerce.gif")}
-                  alt=""
-                />
+                <video
+                  autoPlay
+                  muted
+                  width="358"
+                >
+                  <source
+                    src={require("./assets/ecommerce.mp4")}
+                    type="video/mp4"
+                  />
+                </video>
                 <p>
                   Multi-page web application. Products in the shop are
                   fetched from an api. Customers can add items to
