@@ -702,7 +702,7 @@ function App() {
             />
 
             <a
-              href={require("./assets/resume.pdf")}
+              href={require("./assets/resume_Stefan_Drazic.pdf")}
               download
               target="_blank"
             >
