@@ -211,6 +211,7 @@ function App() {
                 <h3>Crypto Price Checker</h3>
                 <video
                   autoPlay
+                  loop
                   muted
                   width="358"
                 >
@@ -333,6 +334,7 @@ function App() {
                 <video
                   autoPlay
                   muted
+                  loop
                   width="358"
                 >
                   <source
@@ -462,6 +464,7 @@ function App() {
                 <video
                   autoPlay
                   muted
+                  loop
                   width="358"
                 >
                   <source
@@ -697,7 +700,7 @@ function App() {
           <div className="resume">
             <h1>Resume</h1>
             <img
-              src={require("./assets/resume.jpg")}
+              src={require("./assets/resume.webp")}
               alt=""
             />
 
