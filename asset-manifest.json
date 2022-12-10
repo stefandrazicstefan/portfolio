@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.9d251ad9.css",
-    "main.js": "/portfolio/static/js/main.8e2a7a26.js",
+    "main.js": "/portfolio/static/js/main.58e2d0c5.js",
     "static/media/ecommerce.mp4": "/portfolio/static/media/ecommerce.fcd454ca4a6c6d69e1c7.mp4",
-    "static/media/resume.jpg": "/portfolio/static/media/resume.5e2a55436ad8e6720e61.jpg",
     "static/media/team.mp4": "/portfolio/static/media/team.dc6dcdf8e894b6087081.mp4",
     "static/media/portfolio.jpg": "/portfolio/static/media/portfolio.107850d98077eb3b6859.jpg",
     "static/media/crypto.mp4": "/portfolio/static/media/crypto.5c55fc5fa5b16daa85bb.mp4",
     "static/media/resume_Stefan_Drazic.pdf": "/portfolio/static/media/resume_Stefan_Drazic.bf11fdf8ee32fb6dd89f.pdf",
+    "static/media/resume.webp": "/portfolio/static/media/resume.dcb8c0dd2bd95a940ed4.webp",
     "index.html": "/portfolio/index.html",
     "main.9d251ad9.css.map": "/portfolio/static/css/main.9d251ad9.css.map",
-    "main.8e2a7a26.js.map": "/portfolio/static/js/main.8e2a7a26.js.map"
+    "main.58e2d0c5.js.map": "/portfolio/static/js/main.58e2d0c5.js.map"
   },
   "entrypoints": [
     "static/css/main.9d251ad9.css",
-    "static/js/main.8e2a7a26.js"
+    "static/js/main.58e2d0c5.js"
   ]
 }
